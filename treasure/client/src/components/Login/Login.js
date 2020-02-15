@@ -10,6 +10,7 @@ export default class Login extends Component {
           <label>Email address</label>
           <input
             type="email"
+            name="email"
             className="form-control"
             placeholder="Enter email"
           />
@@ -19,6 +20,7 @@ export default class Login extends Component {
           <label>Password</label>
           <input
             type="password"
+            name="password"
             className="form-control"
             placeholder="Enter password"
           />
