@@ -34,7 +34,7 @@ router.post(
             return res.status(422).json({ error: 'You must enter a price.' });
         }
 
-        Product.findOne({ sku }, (err, existingProduct) => {
+        Product.findOne({ quantity }, (err, existingProduct) => {
             if (err) {
                 return res.status(422).json({
                     error: 'Your request could not be processed. Please try again.'
@@ -42,7 +42,7 @@ router.post(
             }
 
             if (existingProduct) {
-                return res.status(422).json({ error: 'This sku is already in use.' });
+                return res.status(422).json({ error: 'This brand is already in use.' });
             }
 
             const product = new Product({
