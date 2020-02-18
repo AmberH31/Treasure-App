@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import Topnav from "./components/Topnav";
+import Home from "./components/Home";
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class App extends Component {
               )}
             />
             <Route path="/sign-in" component={Login} />
+            <Route path="/home" component={Home} />
           </Switch>
         </div>
       </Router>
