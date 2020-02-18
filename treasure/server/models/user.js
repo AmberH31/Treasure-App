@@ -19,8 +19,8 @@ var UserSchema = new Schema({
         type: String,
         required: true
     }, name: {
-        firstname: {},
-        lastname: {}
+        firstName: { type: String },
+        lastName: { type: String }
     }
 });
 
