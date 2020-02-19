@@ -61,7 +61,7 @@ export default class Login extends Component {
       <div className="row d-flex justify-content-center ">
         <form className="col-md-6 ">
           <h3 className="text-center">Sign In</h3>
-
+          {this.props.loginFailed && "please check your username or password"}
           <div className="form-group">
             <label>Email address</label>
             <input

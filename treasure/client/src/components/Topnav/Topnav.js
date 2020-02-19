@@ -13,6 +13,7 @@ import {
   // DropdownItem,
   // NavbarText
 } from "reactstrap";
+import "./Topnav.css";
 
 const Topnav = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,32 +21,31 @@ const Topnav = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar className="fixed" color="light" light expand="md">
-        <NavbarBrand href="/">
-          Treasure
-          {/* {props.user.email} */}
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto align-right" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/AmberH31/Treasure-App">
-                GitHub
-              </NavLink>
-            </NavItem>
+    <Navbar className="topnav" color="light" light expand="md">
+      <NavbarBrand href="/">
+        Treasure
+        {/* {props.user.email} */}
+      </NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mr-auto align-right" navbar>
+          <NavItem>
+            <NavLink href="/components/">Components</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://github.com/AmberH31/Treasure-App">
+              GitHub
+            </NavLink>
+          </NavItem>
 
-            {/* suppose to show username here */}
-            <NavItem>
-              <NavLink href="https://github.com/AmberH31/Treasure-App">
-                Username
-                {props.username}
-              </NavLink>
-            </NavItem>
-            {/* <UncontrolledDropdown nav inNavbar>
+          {/* suppose to show username here */}
+          <NavItem>
+            <NavLink href="https://github.com/AmberH31/Treasure-App">
+              Username
+              {props.username}
+            </NavLink>
+          </NavItem>
+          {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
@@ -56,10 +56,9 @@ const Topnav = props => {
                 <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown> */}
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 };
 
