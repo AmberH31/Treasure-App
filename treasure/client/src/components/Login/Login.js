@@ -58,9 +58,9 @@ export default class Login extends Component {
       );
     }
     return (
-      <div>
-        <form>
-          <h3>Sign In</h3>
+      <div className="row d-flex justify-content-center ">
+        <form className="col-md-6 ">
+          <h3 className="text-center">Sign In</h3>
 
           <div className="form-group">
             <label>Email address</label>
@@ -68,7 +68,7 @@ export default class Login extends Component {
               onChange={this.handleInputChange}
               type="email"
               name="email"
-              value={this.state.email}
+              value={this.state.user}
               className="form-control"
               placeholder="Enter email"
             />

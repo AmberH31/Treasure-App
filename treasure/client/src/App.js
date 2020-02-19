@@ -3,7 +3,7 @@ import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
-import Topnav from "./components/Topnav";
+// import Topnav from "./components/Topnav";
 import Home from "./components/Home";
 
 class App extends Component {
@@ -46,12 +46,12 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          <Topnav user={this.state.user} />
           <Switch>
             <Route
               exact
               path="/"
               render={props => (
+                // <Home />
                 <Login
                   {...props}
                   isLoggedIn={this.state.isLoggedIn}

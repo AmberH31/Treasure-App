@@ -1,31 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import "./Category.css";
 
 const Category = props => {
   return (
     <div>
-      <Nav className="category-title">
-        <NavItem>
+      <Nav className="category-container category-title">
+        <NavItem class="nav-item">
           <NavLink href="#">All</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem class="nav-item">
           <NavLink href="#">Tops</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem class="nav-item">
           <NavLink href="#">Pants</NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem class="nav-item">
           <NavLink href="#">Dresses</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink href="#">Bags</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Jewelry</NavLink>
-        </NavItem>
-        <NavItem>
+        <NavItem class="nav-item">
           <NavLink href="#">Shoes</NavLink>
+        </NavItem>
+        <NavItem class="nav-item">
+          <NavLink href="#">Bags</NavLink>
         </NavItem>
       </Nav>
       <hr />
