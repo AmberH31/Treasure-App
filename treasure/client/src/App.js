@@ -6,6 +6,9 @@ import Login from "./components/Login";
 // import Topnav from "./components/Topnav";
 import Home from "./components/Home";
 import Topnav from "./components/Topnav";
+import ItemsInfo from "./components/ItemsInfo";
+import Items from "./components/Items";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +18,7 @@ class App extends Component {
         email: "",
         password: ""
       },
-      isLoggedIn: false,
+      isLoggedIn: true,
       loginFailed: false,
       productList: [],
       page: "",
@@ -85,6 +88,7 @@ class App extends Component {
               />
               {/* <Route path="/sign-in" component={Login} /> */}
               {/* <Route path="/home" component={Home} /> */}
+              <Route path="/itemsinfo" component={ItemsInfo} />
             </Switch>
           </div>
         </Router>

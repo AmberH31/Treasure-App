@@ -8,6 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
+import Home from "../Home";
 import "./Login.css";
 
 export default class Login extends Component {
@@ -35,27 +36,27 @@ export default class Login extends Component {
   };
 
   render() {
-    let content = null;
+    // let content = null;
     if (this.props.isLoggedIn) {
-      content = (
-        <Card>
-          <CardImg
-            top
-            width="100%"
-            src="/assets/318x180.svg"
-            alt="Card image cap"
-          />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-      );
+      // content = (
+      // <Card>
+      //   <CardImg
+      //     top
+      //     width="100%"
+      //     src="/assets/318x180.svg"
+      //     alt="Card image cap"
+      //   />
+      //   <CardBody>
+      //     <CardTitle>Card title</CardTitle>
+      //     <CardSubtitle>Card subtitle</CardSubtitle>
+      //     <CardText>
+      //       Some quick example text to build on the card title and make up the
+      //       bulk of the card's content.
+      //     </CardText>
+      //     <Button>Button</Button>
+      //   </CardBody>
+      // </Card>
+      // );
     }
     return (
       <div className="row d-flex justify-content-center ">
@@ -110,7 +111,7 @@ export default class Login extends Component {
             Forgot <a href="#">password?</a>
           </p>
         </form>
-        {content}
+        {/* {content} */}
       </div>
     );
   }

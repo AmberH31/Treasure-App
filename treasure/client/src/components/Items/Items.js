@@ -12,24 +12,20 @@ import "./Items.css";
 
 const Items = props => {
   return (
-    <div className="col-lg-3">
-      <Card className="">
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-        </CardBody>
-        <img
-          width="100%"
-          src="https://via.placeholder.com/160x200"
-          alt="Card image cap"
-        />
-        <CardBody>
-          <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
-          <CardLink href="#">Card Link</CardLink>
-          <CardLink href="#">Another Link</CardLink>
-        </CardBody>
-      </Card>
-    </div>
+    <Card className="card d-flex col-md-4">
+      <img
+        width="100%"
+        src="https://via.placeholder.com/130x150"
+        alt="Card image cap"
+      />
+      <CardBody className="d-flex">
+        <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
+        <CardLink>$20</CardLink>
+        <CardLink href="#" className="1justify-content-right">
+          Add to Cart
+        </CardLink>
+      </CardBody>
+    </Card>
   );
 };
 

@@ -1,7 +1,13 @@
 .item-container {
-  display: grid;
+  /* display: grid; */
 }
 
 .item {
   display: flex;
+}
+
+.card {
+  /* border: 1px solid darkblue !important; */
+  padding: 4vh;
+  /* margin: 0 6vh; */
 }

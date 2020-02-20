@@ -5,7 +5,7 @@ import "./Category.css";
 const Category = props => {
   return (
     <div>
-      <Nav className="category-container category-title">
+      <Nav className="category-container fixed category-title">
         <NavItem className="nav-item">
           <NavLink href="#">All</NavLink>
         </NavItem>
