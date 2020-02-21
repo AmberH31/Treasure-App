@@ -12,7 +12,7 @@ import "./Items.css";
 
 const Items = props => {
   return (
-    <Card className="card d-flex col-md-4">
+    <Card className="card d-flex col-md-3">
       <img
         width="100%"
         src="https://via.placeholder.com/130x150"

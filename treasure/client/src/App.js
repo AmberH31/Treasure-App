@@ -86,7 +86,7 @@ class App extends Component {
                   )
                 }
               />
-              {/* <Route path="/sign-in" component={Login} /> */}
+              {/* <Route path="/log-in" component={Login} /> */}
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
             </Switch>
