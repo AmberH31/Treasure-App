@@ -5,6 +5,7 @@ import Slides from "../Slides";
 import Items from "../Items";
 // import Jumbo from "../Jumbo/Jumbo";
 import "./Home.css";
+
 class Home extends Component {
   render() {
     return (
@@ -12,8 +13,14 @@ class Home extends Component {
         <Category />
         <Slides />
         <section>
-          <h1>Home page</h1>
-          <div className="row">
+          <h1 className="title-name d-flex justify-content-center">Products</h1>
+
+          <div className="items row d-flex justify-content-center">
+            <Items />
+            <Items />
+            <Items />
+            <Items />
+            <Items />
             <Items />
             <Items />
             <Items />

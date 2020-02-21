@@ -21,26 +21,29 @@ const Topnav = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="topnav" color="light" light expand="md">
+    <Navbar className="topnav " color="light" light expand="md">
       <NavbarBrand href="/">
         Treasure
         {/* {props.user.email} */}
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="mr-auto align-right" navbar>
-          <NavItem>
-            <NavLink href="/components/">Components</NavLink>
-          </NavItem>
+      <Collapse className="nav" isOpen={isOpen} navbar>
+        <Nav navbar>
+          {/* mr-auto align right */}
+
           <NavItem>
             <NavLink href="https://github.com/AmberH31/Treasure-App">
               GitHub
             </NavLink>
           </NavItem>
 
-          {/* suppose to show username here */}
           <NavItem>
-            <NavLink href="https://github.com/AmberH31/Treasure-App">
+            <NavLink href="/cart">Cart</NavLink>
+          </NavItem>
+
+          {/* suppose to show username here */}
+          <NavItem className="username">
+            <NavLink href="">
               Username
               {props.username}
             </NavLink>
