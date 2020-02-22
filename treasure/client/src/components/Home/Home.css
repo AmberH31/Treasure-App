@@ -1,0 +1,16 @@
+.home-container {
+  margin-top: 58px;
+}
+
+.row {
+  margin: 10px;
+}
+
+.title-name {
+  margin: 20vh;
+}
+
+.items {
+  margin: 20vh;
+  /* border: 1px solid firebrick !important; */
+}

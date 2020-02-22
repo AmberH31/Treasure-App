@@ -1,0 +1,14 @@
+.topnav {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+.nav {
+  /* border: 1px solid darkblue !important; */
+  justify-content: flex-end;
+}
+
+.username {
+  /* border: 1px solid darkblue !important; */
+}

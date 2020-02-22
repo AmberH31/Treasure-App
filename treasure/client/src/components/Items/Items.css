@@ -1,0 +1,12 @@
+.item-container {
+  /* display: grid; */
+}
+
+.item {
+}
+
+.card {
+  /* border: 1px solid darkblue !important; */
+  padding: 0 -15px;
+  margin: 3vh;
+}

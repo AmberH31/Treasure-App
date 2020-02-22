@@ -8,6 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
+import Home from "../Home";
 import "./Login.css";
 
 export default class Login extends Component {
@@ -35,40 +36,40 @@ export default class Login extends Component {
   };
 
   render() {
-    let content = null;
+    // let content = null;
     if (this.props.isLoggedIn) {
-      content = (
-        <Card>
-          <CardImg
-            top
-            width="100%"
-            src="/assets/318x180.svg"
-            alt="Card image cap"
-          />
-          <CardBody>
-            <CardTitle>Card title</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-      );
+      // content = (
+      // <Card>
+      //   <CardImg
+      //     top
+      //     width="100%"
+      //     src="/assets/318x180.svg"
+      //     alt="Card image cap"
+      //   />
+      //   <CardBody>
+      //     <CardTitle>Card title</CardTitle>
+      //     <CardSubtitle>Card subtitle</CardSubtitle>
+      //     <CardText>
+      //       Some quick example text to build on the card title and make up the
+      //       bulk of the card's content.
+      //     </CardText>
+      //     <Button>Button</Button>
+      //   </CardBody>
+      // </Card>
+      // );
     }
     return (
-      <div>
-        <form>
-          <h3>Sign In</h3>
-
+      <div className="row d-flex justify-content-center ">
+        <form className="col-md-6 ">
+          <h3 className="text-center">Sign In</h3>
+          {this.props.loginFailed && "please check your username or password"}
           <div className="form-group">
             <label>Email address</label>
             <input
               onChange={this.handleInputChange}
               type="email"
               name="email"
-              value={this.state.email}
+              value={this.state.user}
               className="form-control"
               placeholder="Enter email"
             />
@@ -110,7 +111,7 @@ export default class Login extends Component {
             Forgot <a href="#">password?</a>
           </p>
         </form>
-        {content}
+        {/* {content} */}
       </div>
     );
   }

@@ -1,0 +1,11 @@
+.item-container {
+  /* display: grid; */
+}
+
+.item {
+  display: flex;
+}
+
+.card {
+  border: none;
+}
