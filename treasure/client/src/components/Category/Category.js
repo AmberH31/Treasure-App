@@ -7,16 +7,22 @@ const Category = props => {
     <div>
       <Nav className="category-container fixed category-title">
         <NavItem className="nav-item">
-          <NavLink href="#">Canon</NavLink>
+          <NavLink href="#">All</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Nikon</NavLink>
+          <NavLink href="#">Tops</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Sony</NavLink>
+          <NavLink href="#">Pants</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Pentax</NavLink>
+          <NavLink href="#">Dresses</NavLink>
+        </NavItem>
+        <NavItem className="nav-item">
+          <NavLink href="#">Shoes</NavLink>
+        </NavItem>
+        <NavItem className="nav-item">
+          <NavLink href="#">Bags</NavLink>
         </NavItem>
       </Nav>
       <hr />
