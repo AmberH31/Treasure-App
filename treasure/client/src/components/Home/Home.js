@@ -5,8 +5,11 @@ import Slides from "../Slides";
 import Items from "../Items";
 // import Jumbo from "../Jumbo/Jumbo";
 import "./Home.css";
+// import testData from "../../test.json";
 
 class Home extends Component {
+  // constructor()
+
   render() {
     return (
       <div className="home-container">

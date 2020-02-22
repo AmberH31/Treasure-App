@@ -13,7 +13,7 @@ import Gobackbtn from "../Gobackbtn";
 
 const ItemsInfo = props => {
   return (
-    <div className="d-flex justify-content-center">
+    <div className=" info row d-flex justify-content-center">
       <Gobackbtn />
       <Card className="card">
         <img

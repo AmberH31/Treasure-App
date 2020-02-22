@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 // import Topnav from "./components/Topnav";
 import Home from "./components/Home";
 import Topnav from "./components/Topnav";
 import ItemsInfo from "./components/ItemsInfo";
-import Items from "./components/Items";
+import data from "./test.json";
+import Cart from "./components/Cart/Cart";
+// import Cart from "./components/Cart";
 
 class App extends Component {
   constructor(props) {
@@ -77,6 +79,7 @@ class App extends Component {
                   ) : (
                     <Login
                       {...props}
+                      data={data}
                       isLoggedIn={this.state.isLoggedIn}
                       loginUser={this.loginUser}
                       user={this.state.user}
@@ -89,6 +92,7 @@ class App extends Component {
               {/* <Route path="/log-in" component={Login} /> */}
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
+              <Route path="/cart" component={Cart} />
             </Switch>
           </div>
         </Router>

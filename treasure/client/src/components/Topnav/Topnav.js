@@ -44,9 +44,13 @@ const Topnav = props => {
           {/* suppose to show username here */}
           <NavItem className="username">
             <NavLink href="">
-              Username
+              Account
               {props.username}
             </NavLink>
+          </NavItem>
+
+          <NavItem className="login">
+            <NavLink href="/log-in">Log in</NavLink>
           </NavItem>
           {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
