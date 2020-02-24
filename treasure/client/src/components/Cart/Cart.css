@@ -87,6 +87,7 @@ input {
 /* --- HEADER --- */
 header.container {
   margin-bottom: 1.5rem;
+  margin-top: 58px;
 }
 
 header .breadcrumb {
