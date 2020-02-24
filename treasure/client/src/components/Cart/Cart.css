@@ -87,7 +87,12 @@ input {
 /* --- HEADER --- */
 header.container {
   margin-bottom: 1.5rem;
-  margin-top: 58px;
+  /* margin-top: 58px; */
+}
+
+header.container h1 {
+  margin: 17vh 0 14vh 0;
+  text-align: center;
 }
 
 header .breadcrumb {
@@ -126,7 +131,9 @@ header .count {
 .row {
   position: relative;
   overflow: auto;
+  height: 15rem;
   width: 100%;
+  align-items: center;
 }
 
 .col,

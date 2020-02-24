@@ -12,7 +12,7 @@ const ProductList = ({
         {products.map((product, index) => {
           return (
             <li className="row" key={index}>
-              <div className="col left">
+              <div className="col-8 left">
                 <div className="thumbnail">
                   <a href="#">
                     <img src={product.image} alt={product.name} />
@@ -27,7 +27,7 @@ const ProductList = ({
                 </div>
               </div>
 
-              <div className="col right">
+              <div className="col-4 right align-middle">
                 <div className="quantity">
                   <input
                     type="text"
