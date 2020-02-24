@@ -19,8 +19,9 @@ const Items = props => {
         alt="Card image cap"
       />
       <CardBody className="d-flex">
-        <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
-        <CardLink>$20</CardLink>
+        <CardText>CANON</CardText>
+        <br></br>
+        <CardLink>$</CardLink>
         <CardLink href="#" className="1justify-content-right">
           Add to Cart
         </CardLink>
