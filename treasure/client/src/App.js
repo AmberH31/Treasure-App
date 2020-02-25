@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 // import Topnav from "./components/Topnav";
@@ -75,15 +75,15 @@ class App extends Component {
                   this.state.isLoggedIn ? (
                     <Home />
                   ) : (
-                    <Login
-                      {...props}
-                      isLoggedIn={this.state.isLoggedIn}
-                      loginUser={this.loginUser}
-                      user={this.state.user}
-                      loginFailed={this.state.loginFailed}
+                      <Login
+                        {...props}
+                        isLoggedIn={this.state.isLoggedIn}
+                        loginUser={this.loginUser}
+                        user={this.state.user}
+                        loginFailed={this.state.loginFailed}
                       //overwrite these three values
-                    />
-                  )
+                      />
+                    )
                 }
               />
               {/* <Route path="/log-in" component={Login} /> */}
