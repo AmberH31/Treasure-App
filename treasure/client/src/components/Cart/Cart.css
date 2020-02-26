@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: #f58551;
+  color: #0b926e;
 }
 
 button {
@@ -44,8 +44,8 @@ button::after {
 }
 
 button:hover {
-  background-color: #f58551;
-  border-color: #f58551;
+  background-color: #0b926e;
+  border-color: #0b926e;
 }
 
 button:hover::after {
@@ -80,7 +80,7 @@ input {
 
 .container {
   width: 90%;
-  margin: 0 auto;
+  margin: 5rem auto;
   overflow: auto;
 }
 
@@ -128,7 +128,7 @@ header .count {
   border-bottom: 1px solid #ddd;
 }
 
-.row {
+.product-list {
   position: relative;
   overflow: auto;
   height: 15rem;
@@ -197,7 +197,7 @@ header .count {
 
 .quantity > input:hover,
 .quantity > input:focus {
-  border-color: #f58551;
+  border-color: #16cc9b;
 }
 
 .close {
@@ -208,7 +208,7 @@ header .count {
 }
 
 .close:hover {
-  fill: #f58551;
+  fill: #0b926e;
 }
 
 /* --- SUMMARY --- */
@@ -236,7 +236,7 @@ header .count {
 }
 
 .promotion:hover > input {
-  border-color: #f58551;
+  border-color: #0b926e;
 }
 
 .promotion > button {
@@ -247,8 +247,8 @@ header .count {
 }
 
 .promotion:hover > button {
-  border-color: #f58551;
-  background-color: #f58551;
+  border-color: #0b926e;
+  background-color: #0b926e;
 }
 
 .promotion > button::after {

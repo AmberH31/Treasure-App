@@ -21,9 +21,9 @@ const Topnav = props => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="topnav " color="light" light expand="md">
+    <Navbar className="topnav " light expand="md">
       <NavbarBrand href="/">
-        Treasure
+        iCamera
         {/* {props.user.email} */}
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />

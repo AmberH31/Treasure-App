@@ -1,9 +1,14 @@
 .goback-btn {
   /* border: 1px solid #666666; */
-  /* margin-top: 58px; */
-  border: 1px solid saddlebrown;
+  margin-top: 10px;
+  /* border: 1px solid saddlebrown; */
 }
 
-.button {
-  font-size: 3em;
+.goback-btn i {
+  font-size: 3rem;
+  color: #16cc9b;
+}
+
+.goback-btn i:hover {
+  color: #0b926e;
 }
