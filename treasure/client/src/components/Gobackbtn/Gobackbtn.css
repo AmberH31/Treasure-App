@@ -1,4 +1,9 @@
 .goback-btn {
-  border: 1px solid #666666;
-  margin-top: 60px;
+  /* border: 1px solid #666666; */
+  /* margin-top: 58px; */
+  border: 1px solid saddlebrown;
+}
+
+.button {
+  font-size: 3em;
 }

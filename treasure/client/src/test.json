@@ -1,0 +1,30 @@
+[
+  {
+    "image": "https://via.placeholder.com/200x150",
+    "name": "Canon 1",
+    "description": "Description for product item number 1",
+    "price": 1159.99,
+    "quantity": 2
+  },
+  {
+    "image": "https://via.placeholder.com/200x150",
+    "name": "Canon 2",
+    "description": "Description for product item number 1",
+    "price": 1259.99,
+    "quantity": 2
+  },
+  {
+    "image": "https://via.placeholder.com/200x150",
+    "name": "Canon 3",
+    "description": "Description for product item number 1",
+    "price": 1359.99,
+    "quantity": 2
+  },
+  {
+    "image": "https://via.placeholder.com/200x150",
+    "name": "Canon 4",
+    "description": "Description for product item number 1",
+    "price": 1459.99,
+    "quantity": 2
+  }
+]

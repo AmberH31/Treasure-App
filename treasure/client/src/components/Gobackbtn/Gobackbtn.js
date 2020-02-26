@@ -4,7 +4,14 @@ import "./Gobackbtn.css";
 const Gobackbtn = props => {
   return (
     <div className="goback-btn">
-      <input type="button" value="<" onclick="history.back(-1)" />
+      <i
+        className="far fa-arrow-alt-circle-left"
+        type="button"
+        value=""
+        onclick="goBack()"
+      >
+        {" "}
+      </i>
     </div>
   );
 };
