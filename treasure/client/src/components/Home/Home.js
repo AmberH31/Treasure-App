@@ -18,7 +18,7 @@ class Home extends Component {
         <section>
           <h1 className="title-name d-flex justify-content-center">Products</h1>
 
-          <div className="items row d-flex justify-content-center">
+          <div className="items row home d-flex justify-content-center">
             <Items />
             <Items />
             <Items />

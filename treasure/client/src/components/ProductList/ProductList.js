@@ -11,7 +11,7 @@ const ProductList = ({
       <ul className="products">
         {products.map((product, index) => {
           return (
-            <li className="row" key={index}>
+            <li className="row product-list" key={index}>
               <div className="col-8 left">
                 <div className="thumbnail">
                   <a href="#">

@@ -3,13 +3,14 @@ import "./App.css";
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
+import Signup from "./components/Signup/Signup";
+
 // import Topnav from "./components/Topnav";
 import Home from "./components/Home";
 import Topnav from "./components/Topnav";
 import ItemsInfo from "./components/ItemsInfo";
 import data from "./test.json";
 import Cart from "./components/Cart/Cart";
-// import Cart from "./components/Cart";
 
 class App extends Component {
   constructor(props) {
@@ -93,6 +94,7 @@ class App extends Component {
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
+              <Route path="/signup" component={Signup} />
             </Switch>
           </div>
         </Router>

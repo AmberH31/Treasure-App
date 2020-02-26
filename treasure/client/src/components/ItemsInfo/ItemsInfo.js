@@ -13,15 +13,15 @@ import Gobackbtn from "../Gobackbtn";
 
 const ItemsInfo = props => {
   return (
-    <div className=" info row d-flex justify-content-center">
-      <Gobackbtn />
-      <Card className="card">
+    <div className=" info d-flex justify-content-center">
+      <Card className="card row">
+        <Gobackbtn className="col-1" />
         <img
-          width="100%"
+          className="image col-7"
           src="https://via.placeholder.com/130x150"
           alt="Card image cap"
         />
-        <CardBody className="">
+        <CardBody className="col-4">
           <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
           <CardLink>$20</CardLink>
           <CardLink href="#" className="1justify-content-right">

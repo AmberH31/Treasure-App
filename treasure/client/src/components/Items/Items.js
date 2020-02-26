@@ -22,7 +22,9 @@ const Items = props => {
         <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
         <CardLink>$20</CardLink>
         <CardLink href="#" className="d-flex justify-content-right">
-          Add to Cart
+          <div className="addtoCart">
+            <i class="fas fa-cart-plus"></i>{" "}
+          </div>
         </CardLink>
       </CardBody>
     </Card>

@@ -2,4 +2,28 @@
   /* border: 1px solid darkblue !important; */
   padding: 0 -15px;
   margin: 3vh;
+  padding: 0;
+  border: none;
+}
+
+.card .card-body {
+  padding: 3rem 0;
+}
+
+.card .addtoCart {
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #16cc9b;
+  padding: 10px 15px;
+  color: #16cc9b;
+}
+
+.card .addtoCart:hover {
+  background-color: #16cc9b;
+  color: #fff;
+}
+
+.card .addtoCart .fas {
+  font-size: 1.5rem;
 }

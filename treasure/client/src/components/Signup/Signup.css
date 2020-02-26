@@ -3,17 +3,21 @@
   height: 100vh;
 }
 
-.btn {
-  background-color: #16cc9b;
+.signup .btn {
+  background-color: #18abe6;
   color: rgb(255, 255, 255);
 }
 
-.btn:hover {
-  background-color: #0b926e;
+.signup .btn:hover {
+  background-color: #0f8fc2;
   color: rgb(255, 255, 255);
 }
 
-.row > form {
+.signup .row > form {
   /* border: 1px solid goldenrod; */
   margin: auto 0;
+}
+
+.signup .text-right a:hover {
+  color: #18abe6;
 }

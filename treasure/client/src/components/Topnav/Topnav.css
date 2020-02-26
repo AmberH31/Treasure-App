@@ -3,7 +3,17 @@
   top: 0;
   width: 100%;
   z-index: 3;
+  background-color: rgb(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 2px rgb(119, 119, 119, 0.2);
 }
+
+.nav-link {
+  color: rgb(56, 56, 56);
+}
+.nav-link:hover {
+  color: #16cc9b;
+}
+
 .nav {
   /* border: 1px solid darkblue !important; */
   justify-content: flex-end;
