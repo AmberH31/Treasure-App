@@ -65,7 +65,7 @@ class Cart extends React.Component {
 
   onRemoveProduct = i => {
     const products = this.state.products.filter((product, index) => {
-      return index !== i;
+      return index != i;
     });
 
     this.setState({ products });
@@ -116,11 +116,11 @@ class Cart extends React.Component {
             />
           </div>
         ) : (
-            <div className="empty-product">
-              <h3>There are no products in your cart.</h3>
-              <button>Shopping now</button>
-            </div>
-          )}
+          <div className="empty-product">
+            <h3>There are no products in your cart.</h3>
+            <button>Shopping now</button>
+          </div>
+        )}
       </div>
     );
 
