@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./Signup.css";
 
-export default class Signup extends Component {
+class Signup extends Component {
   state = {
     name: "",
     email: "",
@@ -17,18 +18,18 @@ export default class Signup extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
     const user = {
+      name: this.state.name,
       email: this.state.email,
       password: this.state.password
     };
-    this.props.loginUser(user);
+    await this.props.registerUser(user);
+    this.props.history.push("/")
   };
 
   render() {
-    if (this.props.isLoggedIn) {
-    }
     return (
       <div className="signup row d-flex justify-content-center ">
         <form className="col-md-6 ">
@@ -96,3 +97,5 @@ export default class Signup extends Component {
     );
   }
 }
+const SignUpWithRouter = withRouter(Signup);
+export default SignUpWithRouter;

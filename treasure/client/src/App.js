@@ -31,7 +31,11 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    const user = JSON.parse(localStorage.getItem("user"));
+    let user;
+    if (!localStorage.getItem("user") && localStorage.getItem("user") !== "undefined") {
+      user = JSON.parse(localStorage.getItem("user"));
+    }
+
     console.log(user);
     // pretend auto log in
     this.setState({
@@ -76,6 +80,12 @@ class App extends Component {
     });
   };
 
+  registerUser = (user) => {
+    API.doPost("/api/register", user, data => {
+      console.log(data);
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -94,23 +104,23 @@ class App extends Component {
                   this.state.isLoggedIn ? (
                     <Home />
                   ) : (
-                    <Login
-                      {...props}
-                      data={data}
-                      isLoggedIn={this.state.isLoggedIn}
-                      loginUser={this.loginUser}
-                      user={this.state.user}
-                      loginFailed={this.state.loginFailed}
+                      <Login
+                        {...props}
+                        data={data}
+                        isLoggedIn={this.state.isLoggedIn}
+                        loginUser={this.loginUser}
+                        user={this.state.user}
+                        loginFailed={this.state.loginFailed}
                       //overwrite these three values
-                    />
-                  )
+                      />
+                    )
                 }
               />
               {/* <Route path="/log-in" component={Login} /> */}
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
-              <Route path="/signup" component={Signup} />
+              <Route path="/signup" render={() => (<Signup registerUser={this.registerUser} />)} />
               {/* <Route path="/logout" component={Login} /> */}
             </Switch>
           </div>
