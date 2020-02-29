@@ -25,8 +25,10 @@ class Signup extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    await this.props.registerUser(user);
-    this.props.history.push("/")
+    await this.props.registerUser(user, () => {
+      this.props.history.push("/")
+    });
+
   };
 
   render() {
