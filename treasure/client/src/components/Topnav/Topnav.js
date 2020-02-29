@@ -13,11 +13,12 @@ import {
   // DropdownItem,
   // NavbarText
 } from "reactstrap";
+import { useHistory } from "react-router-dom";
 import "./Topnav.css";
 
-const Topnav = props => {
+const Topnav = ({ user, logoutUser }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const history = useHistory();
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -45,13 +46,21 @@ const Topnav = props => {
           <NavItem className="username">
             <NavLink href="">
               Account
-              {props.username}
+              {user && user.userName}
             </NavLink>
           </NavItem>
 
-          <NavItem className="login">
-            <NavLink href="/log-in">Log in</NavLink>
-          </NavItem>
+          {/* <NavItem className="login">
+            <NavLink href="/logout">Log out</NavLink>
+          </NavItem> */}
+          <button
+            onClick={async () => {
+              await logoutUser(user);
+              history.push("/");
+            }}
+          >
+            Logout
+          </button>
           {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options

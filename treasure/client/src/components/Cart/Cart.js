@@ -2,7 +2,7 @@ import React from "react";
 import ProductList from "../ProductList/ProductList";
 import Summary from "../Summary/Summary";
 import Header from "../Header/Header";
-import "../../test.json";
+import "../../camera.json";
 
 import "./Cart.css";
 

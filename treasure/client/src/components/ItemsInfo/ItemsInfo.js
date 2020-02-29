@@ -15,7 +15,7 @@ const ItemsInfo = props => {
   return (
     <div className=" info d-flex justify-content-center">
       <Card className="card row">
-        <Gobackbtn className="col-1" />
+        {/* <Gobackbtn className="col-1" /> */}
         <img
           className="image col-7"
           src="https://via.placeholder.com/130x150"

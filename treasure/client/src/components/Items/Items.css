@@ -10,12 +10,21 @@
   padding: 3rem 0;
 }
 
+.card .card-link {
+  margin: auto;
+  padding: 10px;
+}
+
+.card .card-text {
+  margin: auto;
+}
+
 .card .addtoCart {
   text-align: center;
   margin: auto;
   border-radius: 5px;
   border: 1px solid #16cc9b;
-  padding: 10px 15px;
+  padding: 8px 18px;
   color: #16cc9b;
 }
 
@@ -25,5 +34,5 @@
 }
 
 .card .addtoCart .fas {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
