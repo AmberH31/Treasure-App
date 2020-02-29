@@ -23,7 +23,7 @@ const Items = props => {
         <CardLink>$20</CardLink>
         <CardLink href="#" className="d-flex justify-content-right">
           <div className="addtoCart">
-            <i class="fas fa-cart-plus"></i>{" "}
+            <i className="fas fa-cart-plus"></i>{" "}
           </div>
         </CardLink>
       </CardBody>

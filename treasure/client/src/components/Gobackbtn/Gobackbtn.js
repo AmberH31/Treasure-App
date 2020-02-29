@@ -8,7 +8,7 @@ const Gobackbtn = props => {
         className="far fa-arrow-alt-circle-left"
         type="button"
         value=""
-        onclick="goBack()"
+        onClick="goBack()"
       >
         {" "}
       </i>
