@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import utils from "./utils/API";
 import "./App.css";
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -9,8 +10,9 @@ import Signup from "./components/Signup/Signup";
 import Home from "./components/Home";
 import Topnav from "./components/Topnav";
 import ItemsInfo from "./components/ItemsInfo";
-import data from "./test.json";
+import data from "./camera.json";
 import Cart from "./components/Cart/Cart";
+import API from "./components/utils/API";
 
 class App extends Component {
   constructor(props) {
@@ -21,32 +23,33 @@ class App extends Component {
         email: "",
         password: ""
       },
-      isLoggedIn: true,
+      isLoggedIn: false,
       loginFailed: false,
       productList: [],
       page: "",
       category: ""
     };
   }
-
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     // pretend auto log in
-  //     this.setState({
-  //       user: {
-  //         userName: "test_user",
-  //         email: "test@user",
-  //         password: "p@ssw0rd"
-  //       },
-  //       isLoggedIn: true
-  //     });
-  //   }, 1000);
-  // }
+  componentDidMount() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
+    // pretend auto log in
+    this.setState({
+      user: user,
+      isLoggedIn: user ? true : false
+    });
+  }
 
   loginUser = user => {
-    //    this.setState({
-    //    user: user
-    //});
+    API.doPost("/api/login", user, data => {
+      console.log(data);
+      localStorage.setItem("user", JSON.stringify(data.user));
+      this.setState({
+        user: data.user,
+        isLoggedIn: true
+      });
+    });
+
     //async programming
     //axios api calls will return promises.
     //127.0.0.1 === localhost same thing
@@ -62,10 +65,23 @@ class App extends Component {
     //}).catch(console.log);
   };
 
+  logoutUser = user => {
+    API.doPost("/api/logout", user, data => {
+      console.log(data);
+      localStorage.removeItem("user");
+      this.setState({
+        isLoggedIn: false,
+        user: ""
+      });
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
-        {this.state.isLoggedIn && <Topnav />}
+        {this.state.isLoggedIn && (
+          <Topnav user={this.state.user} logoutUser={this.logoutUser} />
+        )}
         <Router>
           <div className="container-fluid">
             <Switch>
@@ -95,6 +111,7 @@ class App extends Component {
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
               <Route path="/signup" component={Signup} />
+              {/* <Route path="/logout" component={Login} /> */}
             </Switch>
           </div>
         </Router>
