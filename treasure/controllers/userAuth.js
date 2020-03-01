@@ -11,7 +11,6 @@ exports.register = (req, res) => {
                 error: 'Email is taken'
             });
         }
-        console.log(user.hashed_password)
         // we set salt and hased_password as undefined 
         // so we don't expose user's credentials
         user.salt = undefined;
