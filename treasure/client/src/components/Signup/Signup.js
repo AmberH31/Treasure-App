@@ -23,7 +23,11 @@ export default class Signup extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    this.props.loginUser(user);
+
+    await this.props.registerUser(user, () => {
+      this.props.history.push("/")
+    });
+
   };
 
   render() {

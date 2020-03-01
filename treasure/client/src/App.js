@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import utils from "./utils/API";
 import "./App.css";
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, withRouter } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup/Signup";
 
@@ -76,6 +76,13 @@ class App extends Component {
     });
   };
 
+  registerUser = (user, callback) => {
+    API.doPost("/api/register", user, data => {
+      if (!data.error) {
+        callback();
+      }
+    });
+  }
   render() {
     return (
       <React.Fragment>
@@ -120,4 +127,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
