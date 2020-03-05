@@ -14,6 +14,7 @@ import data from "./camera.json";
 import Cart from "./components/Cart/Cart";
 import API from "./components/utils/API";
 import Checkout from "./components/Checkout";
+import Complete from "./components/Complete";
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +33,10 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    const user = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : null;
+    const user =
+      localStorage.getItem("user") !== "undefined"
+        ? JSON.parse(localStorage.getItem("user"))
+        : null;
     console.log(localStorage.getItem("user"));
     // pretend auto log in
     this.setState({
@@ -82,12 +86,12 @@ class App extends Component {
       if (!data.error) {
         callback();
       } else {
-        console.log(data)
+        console.log(data);
       }
     });
-  }
+  };
   render() {
-    console.log(process.env)
+    console.log(process.env);
     return (
       <React.Fragment>
         {this.state.isLoggedIn && (
@@ -105,24 +109,28 @@ class App extends Component {
                   this.state.isLoggedIn ? (
                     <Home />
                   ) : (
-                      <Login
-                        {...props}
-                        data={data}
-                        isLoggedIn={this.state.isLoggedIn}
-                        loginUser={this.loginUser}
-                        user={this.state.user}
-                        loginFailed={this.state.loginFailed}
+                    <Login
+                      {...props}
+                      data={data}
+                      isLoggedIn={this.state.isLoggedIn}
+                      loginUser={this.loginUser}
+                      user={this.state.user}
+                      loginFailed={this.state.loginFailed}
                       //overwrite these three values
-                      />
-                    )
+                    />
+                  )
                 }
               />
               {/* <Route path="/log-in" component={Login} /> */}
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
-              <Route path="/signup" render={() => (<Signup registerUser={this.registerUser} />)} />
+              <Route
+                path="/signup"
+                render={() => <Signup registerUser={this.registerUser} />}
+              />
               <Route path="/checkout" component={Checkout} />
+              <Route path="/complete" component={Complete} />
             </Switch>
           </div>
         </Router>

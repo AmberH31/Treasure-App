@@ -5,10 +5,12 @@ import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import "./Checkout.css";
+import Topnav from "../Topnav/Topnav";
 
 const Checkout = () => {
   return (
     <React.Fragment>
+      <Topnav />
       <div className="container box justify-content-center">
         <Typography className="text-center" variant="h4" gutterBottom>
           Shipping address
@@ -101,7 +103,7 @@ const Checkout = () => {
           </Grid>
         </Grid>
         <div className="checkout">
-          <form method="get" action="/done">
+          <form method="get" action="/complete">
             <button type="submit"> Summit</button>
           </form>
         </div>
