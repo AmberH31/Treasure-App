@@ -1,3 +1,18 @@
 .slide-img {
   width: 100%;
+  border-radius: 0;
+}
+
+.carousel-caption {
+  font-size: 50px;
+  margin-bottom: 10rem;
+  z-index: 1;
+}
+
+.carousel-caption > p {
+  /* border: 1px solid salmon !important; */
+  padding-bottom: 0;
+  font-family: "Spartan", sans-serif;
+  text-shadow: 2px 2px 5px rgb(92, 92, 92);
+  /* animation-delay: 2s; */
 }

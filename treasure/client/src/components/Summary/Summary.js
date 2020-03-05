@@ -1,5 +1,6 @@
 import React from "react";
 import "../Cart/Cart.css";
+import { Route } from "react-router-dom";
 
 const Summary = props => {
   const subTotal = props.products.reduce((total, product) => {
@@ -8,6 +9,10 @@ const Summary = props => {
   const discount = (subTotal * props.discount) / 100;
   const tax = props.tax;
   const total = subTotal - discount + tax;
+
+  const handleClick = () => {
+    this.push("/checkout");
+  };
 
   return (
     <section className="container">
@@ -37,7 +42,9 @@ const Summary = props => {
       </div>
 
       <div className="checkout">
-        <button type="button">Check Out</button>
+        <form method="get" action="/checkout">
+          <button type="submit"> Check Out</button>
+        </form>
       </div>
     </section>
   );

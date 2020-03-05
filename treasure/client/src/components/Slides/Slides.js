@@ -60,7 +60,7 @@ const Slides = props => {
         key={item.src}
       >
         <img className="slide-img" src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} />
+        <CarouselCaption className=" text-center" captionText={item.caption} />
       </CarouselItem>
     );
   });
