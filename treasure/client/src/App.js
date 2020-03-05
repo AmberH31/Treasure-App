@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import utils from "./utils/API";
 import "./App.css";
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route, Link, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup/Signup";
 
@@ -14,6 +14,7 @@ import data from "./camera.json";
 import Cart from "./components/Cart/Cart";
 import API from "./components/utils/API";
 import Checkout from "./components/Checkout";
+import Complete from "./components/Complete";
 
 class App extends Component {
   constructor(props) {
@@ -81,13 +82,16 @@ class App extends Component {
   };
 
   registerUser = (user, callback) => {
-    API.doPost("/api/register", user, data => {
+    API.doPost("http://localhost:8080/api/register", user, data => {
       if (!data.error) {
         callback();
+      } else {
+        console.log(data);
       }
     });
-  }
+  };
   render() {
+    console.log(process.env);
     return (
       <React.Fragment>
         {this.state.isLoggedIn && (
@@ -121,8 +125,12 @@ class App extends Component {
               {/* <Route path="/home" component={Home} /> */}
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
-              <Route path="/signup" component={Signup} />
+              <Route
+                path="/signup"
+                render={() => <Signup registerUser={this.registerUser} />}
+              />
               <Route path="/checkout" component={Checkout} />
+              <Route path="/complete" component={Complete} />
             </Switch>
           </div>
         </Router>
@@ -131,4 +139,4 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export default App;

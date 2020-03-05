@@ -1,0 +1,23 @@
+.MuiAlert-standardSuccess {
+  margin-top: 10vh;
+}
+.MuiAlert-standardSuccess .MuiAlert-icon {
+  /* border: 1px solid seagreen; */
+  width: 100%;
+  margin: 6vh auto;
+}
+
+.MuiSvgIcon-fontSizeInherit {
+  margin: auto;
+  font-size: 100px !important;
+}
+
+.order-sucess {
+  color: green;
+}
+
+.order-sucess {
+  margin: 3vh 0 10vh 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
