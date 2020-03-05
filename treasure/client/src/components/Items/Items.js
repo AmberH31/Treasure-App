@@ -10,21 +10,17 @@ import {
 } from "reactstrap";
 import Modalbox from "../Modalbox/Modalbox";
 import "./Items.css";
-
-const Items = props => {
+import ProductImage from "./ViewProductImage";
+const Item = ({ product }) => {
   return (
     <Card className="card d-flex col-md-3">
-      <img
-        width="100%"
-        src="https://via.placeholder.com/130x150"
-        alt="Card image cap"
-      />
+      <ProductImage itemID={product['_id']} />
       <CardBody className="d-flex">
-        <CardText>A NEW YORK CITY GRAPHIC T-SHIRT</CardText>
-        <CardLink>$20</CardLink>
+        <CardText>{product.name}</CardText>
+        <CardLink>${product.price}</CardLink>
         <CardLink href="#" className="d-flex justify-content-right">
           <div className="addtoCart">
-            <Modalbox />
+            <Modalbox product={product} />
           </div>
         </CardLink>
       </CardBody>
@@ -32,4 +28,4 @@ const Items = props => {
   );
 };
 
-export default Items;
+export default Item;
