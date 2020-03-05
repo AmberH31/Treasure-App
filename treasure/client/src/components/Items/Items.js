@@ -8,6 +8,7 @@ import {
   CardTitle,
   CardSubtitle
 } from "reactstrap";
+import Modalbox from "../Modalbox/Modalbox";
 import "./Items.css";
 
 const Items = props => {
@@ -23,7 +24,7 @@ const Items = props => {
         <CardLink>$20</CardLink>
         <CardLink href="#" className="d-flex justify-content-right">
           <div className="addtoCart">
-            <i className="fas fa-cart-plus"></i>{" "}
+            <Modalbox />
           </div>
         </CardLink>
       </CardBody>

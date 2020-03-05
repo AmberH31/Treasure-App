@@ -7,14 +7,34 @@
   box-shadow: 2px 2px 2px rgb(119, 119, 119, 0.2);
 }
 
-.nav-link {
-  color: rgb(56, 56, 56);
+.navbar-light .navbar-brand {
+  color: #0b926e;
+  font-size: 3.5vh;
 }
-.nav-link:hover {
+.navbar-light .navbar-brand:hover {
+  color: #16cc9b;
+}
+
+.nav-item {
+  color: rgb(56, 56, 56);
+  padding: 0 3vh;
+  /* border: 1px solid salmon !important; */
+}
+
+.cart {
+  display: inline;
+}
+
+.nav-item::hover {
   color: #16cc9b;
 }
 
 .nav {
   /* border: 1px solid darkblue !important; */
   justify-content: flex-end;
+}
+
+button {
+  border-radius: 10px;
+  padding: 1vh 2vh;
 }

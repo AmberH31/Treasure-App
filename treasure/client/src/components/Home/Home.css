@@ -7,10 +7,10 @@
 }
 
 .title-name {
-  margin: 20vh;
+  margin: 20vh 0 10vh 0;
 }
 
 .items {
-  margin: 20vh 0;
+  margin: 5vh 0 20vh 0;
   /* border: 1px solid firebrick !important; */
 }

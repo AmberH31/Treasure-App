@@ -5,25 +5,34 @@ import Header from "../Header/Header";
 import "../../camera.json";
 
 import "./Cart.css";
+import Topnav from "../Topnav/Topnav";
 
 class Cart extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isLoggedIn: true,
       products: [
         {
           image: "https://via.placeholder.com/200x150",
           name: "PRODUCT ITEM NUMBER 1",
           description: "Description for product item number 1",
           price: 5.99,
-          quantity: 2
+          quantity: 1
         },
         {
           image: "https://via.placeholder.com/200x150",
           name: "PRODUCT ITEM NUMBER 2",
           description: "Description for product item number 1",
           price: 9.99,
+          quantity: 1
+        },
+        {
+          image: "https://via.placeholder.com/200x150",
+          name: "PRODUCT ITEM NUMBER 1",
+          description: "Description for product item number 1",
+          price: 5.99,
           quantity: 1
         }
       ],
@@ -94,9 +103,10 @@ class Cart extends React.Component {
 
   render() {
     const products = this.state.products;
-
+    //console.log(this.props.user, this.props.logoutUser);
     return (
       <div>
+        <Topnav user={this.props.user} logoutUser={this.props.logoutUser} />
         <Header products={products} />
 
         {products.length > 0 ? (
