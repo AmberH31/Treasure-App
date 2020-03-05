@@ -1,32 +1,27 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "./Modalbox.css";
-
-const Modalbox = props => {
-  const { buttonLabel, className } = props;
+import ProductImage from "./../Items/ViewProductImage"
+const Modalbox = ({ product }) => {
 
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
-
+  console.log(product)
   return (
     <div>
-      <Button onClick={toggle}>{buttonLabel}</Button>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
+      <Button onClick={toggle}></Button>
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>More Infomation</ModalHeader>
         <ModalBody className="d-flex ">
-          <img
-            src="https://via.placeholder.com/130x150"
-            alt="Card image cap"
-            className="col-6"
-          />
-          <div className="col-6">
-            <h1>
-              {/* {props.name} */}
-              Nikon EOS M50 EF-M 15-45mm
-            </h1>
-            Description: 17 out of 17 (100%) reviewers recommend this product.
-            EF-M 15-45mm f/3.5-6.3 IS STM Lens Kit Black
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", width: "100%" }}>
+            <ProductImage itemID={product['_id']} />
+            <div style={{ gridColumn: '2/3' }}>
+              <h1>
+                {product.name}
+              </h1>
+              Description: {product.description}
+            </div>
           </div>
         </ModalBody>
         <ModalFooter>

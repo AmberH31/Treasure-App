@@ -2,16 +2,28 @@ import React, { Component } from "react";
 import Topnav from "../Topnav/Topnav";
 import Category from "../Category";
 import Slides from "../Slides";
-import Items from "../Items";
+import Item from "../Items";
 import Footer from "../Footer";
+import API from "./../utils/API"
 // import Jumbo from "../Jumbo/Jumbo";
 import "./Home.css";
 // import testData from "../../test.json";
 
 class Home extends Component {
-  // constructor()
-
+  constructor(props) {
+    super(props);
+    this.state = { products: [] }
+  }
+  getProducts = () => {
+    API.doGet('http://localhost:8080/api/products', (data) => {
+      this.setState((state) => ({ ...state, products: data }))
+    })
+  }
+  componentWillMount() {
+    this.getProducts();
+  }
   render() {
+    console.log(this.products)
     return (
       <div className="home-container">
         <Slides />
@@ -21,15 +33,9 @@ class Home extends Component {
           <Category />
 
           <div className="items row home d-flex justify-content-center">
-            <Items />
-            <Items />
-            <Items />
-            <Items />
-            <Items />
-            <Items />
-            <Items />
-            <Items />
-            <Items />
+            {this.state.products.map((product, index) => (
+              <Item key={index} product={product} />
+            ))}
           </div>
         </section>
 
