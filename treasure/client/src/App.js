@@ -31,8 +31,8 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
+    const user = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : null;
+    console.log(localStorage.getItem("user"));
     // pretend auto log in
     this.setState({
       user: user,
@@ -94,16 +94,16 @@ class App extends Component {
                   this.state.isLoggedIn ? (
                     <Home />
                   ) : (
-                    <Login
-                      {...props}
-                      data={data}
-                      isLoggedIn={this.state.isLoggedIn}
-                      loginUser={this.loginUser}
-                      user={this.state.user}
-                      loginFailed={this.state.loginFailed}
+                      <Login
+                        {...props}
+                        data={data}
+                        isLoggedIn={this.state.isLoggedIn}
+                        loginUser={this.loginUser}
+                        user={this.state.user}
+                        loginFailed={this.state.loginFailed}
                       //overwrite these three values
-                    />
-                  )
+                      />
+                    )
                 }
               />
               {/* <Route path="/log-in" component={Login} /> */}
