@@ -1,0 +1,19 @@
+.box {
+  height: 100vh;
+  margin: 25vh auto 5vh auto;
+  padding: 0 10vh;
+  /* border: 1px solid salmon !important; */
+}
+
+.MuiTypography-gutterBottom {
+  padding-bottom: 3rem;
+  /* border: 1px solid salmon; */
+}
+
+/* .MuiInput-underline:after {
+  border-bottom: 2px solid #16cc9b;
+}
+
+.MuiInput-underline:hover {
+  border-bottom: 2px solid #16cc9b;
+} */

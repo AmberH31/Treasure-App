@@ -13,6 +13,8 @@ import {
   // DropdownItem,
   // NavbarText
 } from "reactstrap";
+import { Badge } from "reactstrap";
+
 import { useHistory } from "react-router-dom";
 import "./Topnav.css";
 
@@ -39,7 +41,12 @@ const Topnav = ({ user, logoutUser }) => {
           </NavItem>
 
           <NavItem>
-            <NavLink href="/cart">Cart</NavLink>
+            <NavLink href="/cart" className="cart">
+              Cart
+            </NavLink>
+            <Badge href="#" color="danger">
+              1{/* {this.props.number} */}
+            </Badge>
           </NavItem>
 
           {/* suppose to show username here */}

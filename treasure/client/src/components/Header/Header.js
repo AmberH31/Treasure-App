@@ -12,16 +12,20 @@ const Header = props => {
   }, 0);
 
   return (
-    <header className="container">
-      <h1>Shopping Cart</h1>
+    <div>
+      <img className="header-img"></img>
 
-      <ul className="breadcrumb">
-        <li>Home</li>
-        <li>Shopping Cart</li>
-      </ul>
+      <header className="container">
+        <h1>Shopping Cart</h1>
 
-      <span className="count">{itemCount} items in the bag</span>
-    </header>
+        <ul className="breadcrumb">
+          <li>Home</li>
+          <li>Shopping Cart</li>
+        </ul>
+
+        <span className="count">{itemCount} items in the bag</span>
+      </header>
+    </div>
   );
 };
 

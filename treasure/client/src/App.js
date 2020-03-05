@@ -13,6 +13,7 @@ import ItemsInfo from "./components/ItemsInfo";
 import data from "./camera.json";
 import Cart from "./components/Cart/Cart";
 import API from "./components/utils/API";
+import Checkout from "./components/Checkout";
 
 class App extends Component {
   constructor(props) {
@@ -31,8 +32,11 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
+    const user =
+      localStorage.getItem("user") !== "undefined"
+        ? JSON.parse(localStorage.getItem("user"))
+        : null;
+    console.log(localStorage.getItem("user"));
     // pretend auto log in
     this.setState({
       user: user,
@@ -111,7 +115,7 @@ class App extends Component {
               <Route path="/itemsinfo" component={ItemsInfo} />
               <Route path="/cart" component={Cart} />
               <Route path="/signup" component={Signup} />
-              {/* <Route path="/logout" component={Login} /> */}
+              <Route path="/checkout" component={Checkout} />
             </Switch>
           </div>
         </Router>

@@ -10,19 +10,13 @@ const Category = props => {
           <NavLink href="#">All</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Tops</NavLink>
+          <NavLink href="#">Canon</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Pants</NavLink>
+          <NavLink href="#">Nikon</NavLink>
         </NavItem>
         <NavItem className="nav-item">
-          <NavLink href="#">Dresses</NavLink>
-        </NavItem>
-        <NavItem className="nav-item">
-          <NavLink href="#">Shoes</NavLink>
-        </NavItem>
-        <NavItem className="nav-item">
-          <NavLink href="#">Bags</NavLink>
+          <NavLink href="#">Sony</NavLink>
         </NavItem>
       </Nav>
       <hr />

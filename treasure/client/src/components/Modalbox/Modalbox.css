@@ -1,0 +1,26 @@
+.btn-secondary {
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #16cc9b;
+  padding: 8px 18px;
+  /* color: #16cc9b; */
+}
+
+.btn-secondary:hover {
+  border: 1px solid #0b926e;
+  background-color: #0b926e;
+  border-radius: 5px;
+}
+
+.modal-header > button.close {
+  background-color: #fff;
+}
+.modal-header > button::after {
+  display: none;
+  /* border: 1px solid salmon !important; */
+}
+
+.modal-body h1 {
+  font-size: 20px;
+}

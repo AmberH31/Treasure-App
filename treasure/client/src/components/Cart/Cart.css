@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 html {
@@ -91,7 +92,7 @@ header.container {
 }
 
 header.container h1 {
-  margin: 17vh 0 14vh 0;
+  margin: 1vh 0 14vh 0;
   text-align: center;
 }
 
@@ -278,7 +279,7 @@ header .count {
   text-align: right;
 }
 
-.checkout > button {
+.checkout button {
   font-size: 1.2rem;
   padding: 0.8rem 2.8rem;
   border-radius: 1.5rem;
@@ -356,4 +357,12 @@ header .count {
   html {
     font-size: 16px;
   }
+}
+
+.header-img {
+  background-image: url("../img/slide-4.jpg");
+  margin-top: 22vh;
+  height: 200px;
+  width: 100%;
+  border: none;
 }

@@ -4,6 +4,7 @@
   margin: 3vh;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 
 .card .card-body {
@@ -19,19 +20,19 @@
   margin: auto;
 }
 
-.card .addtoCart {
+/* .card .addtoCart {
   text-align: center;
   margin: auto;
   border-radius: 5px;
   border: 1px solid #16cc9b;
   padding: 8px 18px;
-  color: #16cc9b;
-}
+  color: #16cc9b; 
+} */
 
-.card .addtoCart:hover {
+/* .card .addtoCart:hover {
   background-color: #16cc9b;
   color: #fff;
-}
+} */
 
 .card .addtoCart .fas {
   font-size: 1rem;
